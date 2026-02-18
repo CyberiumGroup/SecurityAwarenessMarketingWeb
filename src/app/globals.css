@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0e1a;
+  --color-foreground: #d1d5db;
+  --color-surface: #111827;
+  --color-surface-light: #1f2937;
+  --color-border: #1e293b;
+  --color-accent: #06b6d4;
+  --color-accent-light: #22d3ee;
+  --color-accent-dark: #0891b2;
+  --color-accent-secondary: #8b5cf6;
+  --color-accent-secondary-light: #a78bfa;
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes for the cyber aesthetic */
+.hero-glow {
+  background: radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.15) 0%, transparent 60%);
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #22d3ee, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
