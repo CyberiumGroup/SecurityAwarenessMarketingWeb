@@ -20,7 +20,6 @@ export default function RoleCards() {
               <FadeInSection key={role.id} delay={i * 100}>
               <a
                 href={`#${role.id}`}
-                href={`#${role.id}`}
                 className="group flex flex-col rounded-2xl border border-white/10 bg-surface-light p-6 transition-colors duration-300 hover:border-accent/40 hover:bg-surface hover:shadow-[0_0_30px_rgba(124,58,237,0.15)]"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-accent/20 to-accent-secondary/10 p-3 w-fit">
