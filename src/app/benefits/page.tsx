@@ -5,6 +5,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FadeInSection from "@/components/ui/FadeInSection";
 import RoleCards from "@/components/sections/RoleCards";
+import ResilienceScoreGauge from "@/components/sections/ResilienceScoreGauge";
 import CTABanner from "@/components/sections/CTABanner";
 import { BENEFITS_PAGE, RESILIENCE_DOMAINS, ROLE_BENEFITS } from "@/lib/constants";
 
@@ -123,11 +124,16 @@ export default function BenefitsPage() {
             subtitle={BENEFITS_PAGE.resilienceScore.subtitle}
           />
 
-          <div className="mx-auto mt-8 max-w-3xl text-center text-foreground/80">
-            <p>{BENEFITS_PAGE.resilienceScore.explanation}</p>
+          <div className="mx-auto mt-12 flex max-w-5xl flex-col items-center gap-12 lg:flex-row">
+            <p className="flex-1 text-center text-foreground/80 lg:text-left">
+              {BENEFITS_PAGE.resilienceScore.explanation}
+            </p>
+            <div className="shrink-0">
+              <ResilienceScoreGauge />
+            </div>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {RESILIENCE_DOMAINS.map((domain, i) => {
               const Icon = domainIconMap[domain.icon];
               return (

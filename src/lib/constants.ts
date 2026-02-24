@@ -39,7 +39,7 @@ export const HERO = {
 export const LEADERBOARD_SECTION = {
   badge: "What We Do",
   title: "Turn security awareness into your team's favourite competition",
-  body: "Forget the annual compliance slideshow. CyberEscape drops your team into real-world security scenarios — competing, collaborating, and levelling up skills that will keep your company safe.",
+  body: "Forget the annual compliance slideshow. CyberEscape drops your team into hands-on security scenarios — competing, collaborating, and levelling up skills that will keep your company safe.",
   bullets: [
     { icon: "Zap",      text: "3–5 minute escape-room missions, not hour-long modules" },
     { icon: "Trophy",   text: "Live leaderboards that make security training genuinely competitive" },
@@ -271,33 +271,43 @@ export const ROLE_BENEFITS: RoleBenefit[] = [
 
 export const PRICING_SECTION = {
   title: "Simple, Transparent Pricing",
-  subtitle: "Start with a free trial, pay for full access.",
+  subtitle: "Free to start, transparent as you grow.",
   faqHeading: "Pricing Questions",
 };
 
 export const PRICING = {
-  monthly: 2,
-  annualDiscount: 0.2,
-  trialDays: 14,
-  trialUsers: 5,
   currency: "$",
+  annualDiscount: 0.2,
+  free: {
+    maxUsers: 5,
+    trialDays: 14,
+  },
+  pro: {
+    monthly: 2,
+  },
 } as const;
 
 export const PRICING_FEATURES = {
-  trial: [
-    "Full platform access",
+  free: [
+    "Up to 5 users",
     "All training scenarios",
     "Team collaboration",
-    "Basic analytics",
+    "Basic analytics"
   ],
   pro: [
-    "Everything in Free Trial",
     "Unlimited users",
+    "All training scenarios",
     "Advanced analytics & reporting",
     "Campaign builder",
-    "Priority support",
     "RBAC & audit logs",
     "GDPR compliance tools",
+  ],
+  enterprise: [
+    "Everything in Pro",
+    "Custom SSO / SAML integration",
+    "Dedicated customer success manager",
+    "Custom training content",
+    "Volume pricing",
   ],
 } as const;
 
@@ -401,19 +411,19 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "How does pricing work?",
     answer:
-      "CyberEscape uses simple per-seat pricing at $2 per user per month. Annual commitments receive a 20% discount. We also offer a 14-day free trial for up to 5 users so you can experience the platform before committing.",
+      "CyberEscape offers three tiers: a 14-day free trial for up to 5 users, a Pro plan at $2 per user per month (or $1.60 with an annual commitment), and Enterprise with custom pricing for large organisations.",
     category: "pricing",
   },
   {
     question: "What's included in the free trial?",
     answer:
-      "The free trial gives you full platform access for 14 days with up to 5 users. You get access to all training scenarios, team collaboration features, and basic analytics — no credit card required.",
+      "The free trial supports up to 5 users for 14 days with full access to all training scenarios, team collaboration features, and basic analytics — no credit card required.",
     category: "pricing",
   },
   {
     question: "Are there discounts for large teams?",
     answer:
-      "Yes — annual commitments receive a 20% discount automatically. For enterprise deployments with large user counts, contact our sales team to discuss volume pricing.",
+      "Yes — annual commitments on the Pro plan receive a 20% discount automatically. For enterprise deployments with large user counts, contact our sales team to discuss volume pricing and custom terms.",
     category: "pricing",
   },
   {
