@@ -5,7 +5,6 @@ import { Check, Sparkles } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
-import FadeInSection from "@/components/ui/FadeInSection";
 import { PRICING, PRICING_FEATURES, PRICING_SECTION, APP_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -40,7 +39,7 @@ export default function PricingCards() {
               "relative inline-flex h-7 w-12 items-center rounded-full transition-colors cursor-pointer",
               annual
                 ? "bg-gradient-to-r from-accent to-accent-secondary"
-                : "bg-surface-light"
+                : "bg-white/5"
             )}
             aria-label="Toggle annual pricing"
           >
@@ -68,8 +67,7 @@ export default function PricingCards() {
         <div className="mx-auto mt-12 grid max-w-6xl gap-6 lg:grid-cols-3">
 
           {/* Free */}
-          <FadeInSection>
-          <div className="flex flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 h-full">
+          <div className="animate-fade-in-up flex flex-col rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
             <h3 className="text-lg font-semibold text-white">Free</h3>
             <div className="mt-5">
               <span className="text-5xl font-bold text-white">{PRICING.currency}0</span>
@@ -92,11 +90,9 @@ export default function PricingCards() {
               Start Free Trial
             </Button>
           </div>
-          </FadeInSection>
 
           {/* Pro — highlighted */}
-          <FadeInSection delay={100}>
-          <div className="relative flex flex-col rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/10 to-accent-secondary/5 p-8 shadow-[0_0_50px_rgba(124,58,237,0.2)] h-full">
+          <div className="animate-fade-in-up animation-delay-150 relative flex flex-col rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/10 to-accent-secondary/5 p-8 shadow-[0_0_50px_rgba(124,58,237,0.2)] h-full">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-accent to-accent-secondary px-3 py-1 text-xs font-semibold text-white shadow-lg">
                 <Sparkles className="h-3 w-3" /> Most Popular
@@ -135,11 +131,9 @@ export default function PricingCards() {
               Get Started
             </Button>
           </div>
-          </FadeInSection>
 
           {/* Enterprise */}
-          <FadeInSection delay={200}>
-          <div className="flex flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 h-full">
+          <div className="animate-fade-in-up animation-delay-300 flex flex-col rounded-2xl border border-white/10 bg-white/5 p-8 h-full">
             <h3 className="text-lg font-semibold text-white">Enterprise</h3>
             <div className="mt-5">
               <span className="text-5xl font-bold text-white">Custom</span>
@@ -161,7 +155,6 @@ export default function PricingCards() {
               Contact Sales
             </Button>
           </div>
-          </FadeInSection>
 
         </div>
       </Container>
